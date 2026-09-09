@@ -170,21 +170,30 @@
         ],
         [
           "-display",
-          "gtk"
+          "cocoa"
         ]
       ]
     }
   ],
   "provisioners": [
     {
-        "type": "shell-local",
-        "only_on": ["linux", "darwin"],
-        "inline": ["cd {{user `resources_dir`}} && {{user `resources_dir`}}/download-windows-files.sh"]
+      "type": "shell-local",
+      "only_on": [
+        "linux",
+        "darwin"
+      ],
+      "inline": [
+        "cd {{user `resources_dir`}} && {{user `resources_dir`}}/download-windows-files.sh"
+      ]
     },
     {
-        "type": "shell-local",
-        "only_on": ["windows"],
-        "inline": ["cd {{user `resources_dir`}} && powershell {{user `resources_dir`}}/download-windows-files.ps1"]
+      "type": "shell-local",
+      "only_on": [
+        "windows"
+      ],
+      "inline": [
+        "cd {{user `resources_dir`}} && powershell {{user `resources_dir`}}/download-windows-files.ps1"
+      ]
     },
     {
       "type": "file",
