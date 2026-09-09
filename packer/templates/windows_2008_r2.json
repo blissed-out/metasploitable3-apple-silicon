@@ -131,7 +131,7 @@
       "headless": false,
       "boot_wait": "10m",
       "communicator": "ssh",
-      "accelerator": "kvm",
+      "accelerator": "tcg",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_timeout": "2h",
